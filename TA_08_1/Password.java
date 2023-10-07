@@ -1,34 +1,39 @@
 
 public class Password {
 
-	private String contrasena;
+	private String contraseña;
 	private Integer longitud;
 	
 	public Password() {
-		contrasena = "";
+		contraseña = "";
 		longitud = 8;
 	}
 	
 	public Password(Integer longitud) {
 		this.longitud = longitud;
-		this.contrasena = generarContrasena(longitud);
+		this.contraseña = generarContraseña(longitud);
 	}
 
-	public String getContrasena() {
-		return contrasena;
+	public String getContraseña() {
+		return contraseña;
+	}
+
+	public void setContraseña(String contraseña) {
+		this.contraseña = contraseña;
+		this.longitud = contraseña.length();
 	}
 
 	public Integer getLongitud() {
 		return longitud;
 	}
 
-	private String generarContrasena(Integer longtd) {
+	private String generarContraseña(Integer longtd) {
 		
 		String alphabet = "qwertyuioplkjhgfdsazxcvbnm";
 		String retPassw = "";
 
 	    for(int i = 0; i<longtd; i++){
-			char c = alphabet.charAt(genNumAleatorio(1,27));
+			char c = alphabet.charAt(genNumAleatorio(1,25));
 			retPassw += c;
 		}
 	    return retPassw;
@@ -40,7 +45,7 @@ public class Password {
 	
 	@Override
 	public String toString() {
-		return "Password [contrasena=" + contrasena + ", longitud=" + longitud + "]";
+		return "Password [contraseña=" + contraseña + ", longitud=" + longitud + "]";
 	}
 	
 }

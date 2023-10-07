@@ -67,8 +67,8 @@ public class Persona {
 		return sexo;
 	}
 
-	public void setSexo(sexos sexo) {
-		this.sexo = sexo;
+	public void setSexo(String sexo) {
+		this.sexo = checkSexo(sexo);
 	}
 
 	public void setPeso(double peso) {
@@ -88,12 +88,13 @@ public class Persona {
 	}
 	
 	private sexos checkSexo(String sexo) {
-	    String tmpColor = sexo.toLowerCase();
-	    for (sexos cSexo : sexos.values()) {
-	    	 if (cSexo.equals(tmpColor)) {
-	    		 return cSexo;
+	    //String tmpColor = sexo.toLowerCase();
+		for (Object cSexo : sexos.values()) {
+	    	 if (sexo.equals(cSexo.toString())) {
+	    		 return (sexos)cSexo;
 	    	 }
 	    }
+		
 	    return SEX_DEF;
 	}
 

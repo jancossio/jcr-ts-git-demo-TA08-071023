@@ -34,20 +34,22 @@ public Electrodomestico(double precioBase, String color, String consumoElect, do
 }
 
 private colors checkColor(String color) {
-    String tmpColor = color.toLowerCase();
-    for (colors ccolor : colors.values()) {
-    	 if (ccolor.equals(tmpColor)) {
-    		 return ccolor;
-    	 }
+    //String tmpColor = color.toLowerCase();
+  
+    for (Object cColor : colors.values()) {
+    	if (color.equals(cColor.toString())) {
+    	   		 return (colors)cColor;
+    	   	 }
     }
     return COLOR_DEF;
 }
 
 private energia checkEnerg(String energ) {
-    String tmpEnerg = energ.toLowerCase();
-    for (energia tEnerg : energia.values()) {
-   	 	if (tEnerg.equals(tmpEnerg)) {
-   		 return tEnerg;
+    //String tmpEnerg = energ.toLowerCase();
+
+   for (Object tEnerg : energia.values()) {
+	   if (energ.equals(tEnerg.toString())) {
+   		 return (energia)tEnerg;
    	 	}
    }
     return ENERG_DEF;
