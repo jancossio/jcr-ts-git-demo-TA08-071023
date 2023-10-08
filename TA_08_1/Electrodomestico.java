@@ -1,3 +1,5 @@
+//al dejar los atributos como protected, y asi que solo puedan acceder clases hijas y del package a este,
+//no se ha decidido añadir getters y setters
 
 public class Electrodomestico {
 

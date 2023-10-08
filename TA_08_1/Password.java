@@ -1,6 +1,9 @@
+	//Los atributos se han definido como privados por la naturaleza de las contraseñas para el usuario
+	//se podran acceder a ellos mediante getters y existira un setter para contraseña en el caso que el usuario la quiera cambiar
+	//por ultimo, utilizar este setter modificara tambien la longitud de la contraseña
 
 public class Password {
-
+	
 	private String contraseña;
 	private Integer longitud;
 	

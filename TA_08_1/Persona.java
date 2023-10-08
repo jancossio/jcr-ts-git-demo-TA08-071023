@@ -8,7 +8,7 @@ public class Persona {
 	private String DNI;
 	private String nombre;
 	private Integer edad;
-	protected sexos sexo;
+	private sexos sexo;
 	private double peso;
 	private double altura;
 	
@@ -31,7 +31,7 @@ public class Persona {
 	}
 
 	public Persona(String dNI, String nombre, Integer edad, String sexo, double peso, double altura) {
-		DNI = dNI;
+		this.DNI = dNI;
 		this.nombre = nombre;
 		this.edad = edad;
 		this.sexo = checkSexo(sexo);

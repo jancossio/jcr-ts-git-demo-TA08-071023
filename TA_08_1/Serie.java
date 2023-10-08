@@ -1,3 +1,5 @@
+//se han dejado los atributos con proteccion privada permitiendo el acceso a ellos mediante getters
+//y su manipulacion mediante setters (dado que no parecia haber ninguna restriccion estricta respecto a ello)
 
 public class Serie {
 
@@ -30,8 +32,6 @@ public Serie(String titulo, Integer numeroTemp, String genero, String creador) {
 	this.genero = genero;
 	this.creador = creador;
 }
-
-
 
 public String getTitulo() {
 	return titulo;
